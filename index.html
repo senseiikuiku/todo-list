@@ -1,141 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section class="vh-100 gradient-custom">
-      <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col col-xl-10">
-            <div class="card">
-              <div class="card-body p-5">
-                <form
-                  class="d-flex justify-content-center align-items-center mb-4"
-                >
-                  <div class="form-outline flex-fill">
-                    <input type="text" id="form2" class="form-control" />
-                    <label class="form-label" for="form2"
-                      >Nhập tên công việc</label
-                    >
-                  </div>
-                  <button type="submit" class="btn btn-info ms-2">Thêm</button>
-                </form>
-
-                <!-- Tabs navs -->
-                <ul class="nav nav-tabs mb-4 pb-2">
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link active">Tất cả</a>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link">Đã hoàn thành</a>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link">Chưa hoàn thành</a>
-                  </li>
-                </ul>
-                <!-- Tabs navs -->
-
-                <!-- Tabs content -->
-                <div class="tab-content" id="ex1-content">
-                  <div class="tab-pane fade show active">
-                    <ul class="list-group mb-0">
-                      <li
-                        class="list-group-item d-flex align-items-center justify-content-between border-0 mb-2 rounded"
-                        style="background-color: #f4f6f7"
-                      >
-                        <div>
-                          <input
-                            class="form-check-input me-2"
-                            type="checkbox"
-                            checked
-                          />
-                          <s>Quét nhà</s>
-                        </div>
-                        <div class="d-flex gap-3">
-                          <i class="fas fa-pen-to-square text-warning"></i>
-                          <i class="far fa-trash-can text-danger"></i>
-                        </div>
-                      </li>
-                      <li
-                        class="list-group-item d-flex align-items-center justify-content-between border-0 mb-2 rounded"
-                        style="background-color: #f4f6f7"
-                      >
-                        <div>
-                          <input
-                            class="form-check-input me-2"
-                            type="checkbox"
-                          />
-                          <span>Giặt quần áo</span>
-                        </div>
-                        <div class="d-flex gap-3">
-                          <i class="fas fa-pen-to-square text-warning"></i>
-                          <i class="far fa-trash-can text-danger"></i>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Modal xác nhận xóa -->
-    <div class="overlay" hidden>
-      <div class="modal-custom">
-        <div class="modal-header-custom">
-          <h5>Xác nhận</h5>
-          <i class="fas fa-xmark"></i>
-        </div>
-        <div class="modal-body-custom">
-          <p>Bạn chắc chắn muốn xóa công việc quét nhà?</p>
-        </div>
-        <div class="modal-footer-footer">
-          <button class="btn btn-light">Hủy</button>
-          <button class="btn btn-danger">Xóa</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal cảnh báo lỗi -->
-    <div class="overlay" hidden>
-      <div class="modal-custom">
-        <div class="modal-header-custom">
-          <h5>Cảnh báo</h5>
-          <i class="fas fa-xmark"></i>
-        </div>
-        <div class="modal-body-custom">
-          <p>Tên công việc không được phép để trống.</p>
-        </div>
-        <div class="modal-footer-footer">
-          <button class="btn btn-light">Đóng</button>
-        </div>
-      </div>
-    </div>
-    <!-- MDB -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
-    ></script>
-  </body>
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Vite + React</title>
+      <!-- Font Awesome -->
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+         rel="stylesheet"
+      />
+      <!-- Google Fonts -->
+      <link
+         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+         rel="stylesheet"
+      />
+      <!-- MDB -->
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.jsx"></script>
+   </body>
 </html>
