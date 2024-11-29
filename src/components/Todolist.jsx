@@ -71,12 +71,19 @@ export default function Todolist() {
       validateData(inputValue);
 
       if (inputValue) {
+         // Lấy ngày hiện tại
+         const currentDate = new Date();
+         const formattedDate = `${currentDate.getDate()}/${
+            currentDate.getMonth() + 1
+         }/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+
          // Tiến hành thêm mới công việc vào mảng
          // Id, title, status
          const newJob = {
             id: Math.ceil(Math.random() * 1000000),
             title: inputValue,
             status: false,
+            dateAdded: formattedDate,
          };
 
          // Thêm công việc mới đó vào mảng
@@ -244,9 +251,10 @@ export default function Todolist() {
                                     type="text"
                                     id="form2"
                                     className="form-control"
+                                    placeholder="Nhập tên công việc"
                                     value={inputValue}
                                  />
-                                 <label className="form-label" htmlFor="form2">
+                                 <label className="form-label text__form-label" htmlFor="form2">
                                     Nhập tên công việc
                                  </label>
                               </div>
@@ -376,7 +384,10 @@ export default function Todolist() {
                                                    </div>
                                                 )}
                                              </div>
-                                             <div className="d-flex gap-3">
+                                             <div className="d-flex gap-3 font-gray">
+                                                <span className="date">
+                                                   {item.dateAdded}
+                                                </span>
                                                 <i
                                                    onClick={() =>
                                                       handleShowEdit(item.id)

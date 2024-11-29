@@ -65,15 +65,30 @@ i {
 }
 
 .edit-input {
-  border: none;
+   border: none;
 }
 
 .edit-input::placeholder {
-  font-size: 15px;
+   font-size: 15px;
 }
 
 .edit {
    border: none;
    background: transparent;
    font-size: 15px;
+}
+
+.date {
+   font-size: 13px;
+   color: #918b8b;
+   font-style: italic;
+}
+
+#form2:focus::placeholder {
+   width: 0px;
+}
+
+#form2:not(:placeholder-shown) ~ .text__form-label {
+   color: #3b71ca;
+   transform: translateY(-1rem) translateY(0.1rem) scale(0.8);
 }
